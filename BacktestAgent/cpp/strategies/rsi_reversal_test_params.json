@@ -1,0 +1,53 @@
+{
+  "name": "RSI_Reversal_Test",
+  "description": "RSI reversal strategy for testing complete workflow",
+  "version": "1.0",
+  "buy_conditions": [
+    {
+      "indicator": "rsi_below",
+      "operator": ">",
+      "threshold": 30,
+      "indicator_params": {}
+    }
+  ],
+  "sell_conditions": [
+    {
+      "indicator": "rsi_above",
+      "operator": ">",
+      "threshold": 70,
+      "indicator_params": {}
+    }
+  ],
+  "buy_logic": "AND",
+  "sell_logic": "AND",
+  "parameters": {
+    "rsi_period": {
+      "name": "rsi_period",
+      "value": 14,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    },
+    "rsi_oversold": {
+      "name": "rsi_oversold",
+      "value": 30,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    },
+    "rsi_overbought": {
+      "name": "rsi_overbought",
+      "value": 70,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    },
+    "profit_target_pct": {
+      "name": "profit_target_pct",
+      "value": 3.0,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    }
+  }
+}

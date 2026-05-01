@@ -1,0 +1,39 @@
+{
+  "name": "MA_Crossover",
+  "description": "Moving Average Crossover strategy. Buys when fast MA crosses above slow MA (golden cross) and sells when fast MA crosses below slow MA (death cross). Default fast MA=1 day (24h), slow MA=3 days (72h).",
+  "version": "1.0",
+  "buy_conditions": [
+    {
+      "indicator": "ma_crossover_above",
+      "operator": ">",
+      "threshold": 0,
+      "indicator_params": {}
+    }
+  ],
+  "sell_conditions": [
+    {
+      "indicator": "ma_crossover_below",
+      "operator": ">",
+      "threshold": 0,
+      "indicator_params": {}
+    }
+  ],
+  "buy_logic": "AND",
+  "sell_logic": "AND",
+  "parameters": {
+    "fast_ma_period": {
+      "name": "fast_ma_period",
+      "value": 24,
+      "type": "int",
+      "optimizable": true,
+      "description": ""
+    },
+    "slow_ma_period": {
+      "name": "slow_ma_period",
+      "value": 72,
+      "type": "int",
+      "optimizable": true,
+      "description": ""
+    }
+  }
+}

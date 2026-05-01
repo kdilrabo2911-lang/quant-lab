@@ -1,0 +1,46 @@
+{
+  "name": "MA_Dip_Buyer2",
+  "description": "A dip-buying strategy that enters positions when price is below a Moving Average and ensures sufficient distance from the last open/closed position price. Sells when a profit target is reached. MA period is set to 1 day (to be optimized later).",
+  "version": "1.0",
+  "buy_conditions": [
+    {
+      "indicator": "price",
+      "operator": ">",
+      "threshold": 0,
+      "indicator_params": {}
+    }
+  ],
+  "sell_conditions": [
+    {
+      "indicator": "profit",
+      "operator": ">",
+      "threshold": 2.5,
+      "indicator_params": {}
+    }
+  ],
+  "buy_logic": "AND",
+  "sell_logic": "AND",
+  "parameters": {
+    "ma_period": {
+      "name": "ma_period",
+      "value": 1152,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    },
+    "dip_threshold_pct": {
+      "name": "dip_threshold_pct",
+      "value": 2.5,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    },
+    "profit_target_pct": {
+      "name": "profit_target_pct",
+      "value": 2.5,
+      "type": "double",
+      "optimizable": true,
+      "description": ""
+    }
+  }
+}

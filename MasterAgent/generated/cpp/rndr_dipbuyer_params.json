@@ -1,0 +1,10 @@
+{
+  "name": "RNDR_DipBuyer",
+  "description": "Buy when price is below the 1-day moving average AND price has dropped 2.5% from the previous closed position. Allow multiple concurrent positions only if price drops another 2.5% from the previous open position. Sell when price reaches 2.5% profit target. Never sell at a loss. MA line is the moving average for the last 1 day (optimizable later). Coin: RNDR.",
+  "version": "1.1",
+  "buy_conditions": [],
+  "sell_conditions": [],
+  "buy_logic": "AND",
+  "sell_logic": "AND",
+  "parameters": {}
+}

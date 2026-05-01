@@ -1,0 +1,38 @@
+# SECRET FILES - NEVER COMMIT
+.env
+.env.*
+!.env.example
+*.env
+*secret*
+*key*.json
+*credentials*.json
+*.pem
+*.key
+*.crt
+BotBuildAgent/**/secrets.env
+
+# Build artifacts
+__pycache__/
+*.py[cod]
+build/
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+node_modules/
+
+# Data & logs
+*.log
+*.db
+*.sqlite
+**/trading_positions*.json
+**/portfolio_state*.json
+results/
+backtest_outputs/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+.claude/

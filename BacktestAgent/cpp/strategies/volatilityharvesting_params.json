@@ -1,0 +1,46 @@
+{
+  "name": "VolatilityHarvesting",
+  "description": "Harvests profits from coin volatility by buying dips and selling peaks. Captures a configurable percentage (default 2%) off volatility swings. The threshold is adjustable per coin since volatility varies - more volatile coins may use higher thresholds, less volatile coins lower ones.",
+  "version": "1.0",
+  "buy_conditions": [
+    {
+      "indicator": "price_dip_from_recent_peak",
+      "operator": ">",
+      "threshold": 2.0,
+      "indicator_params": {}
+    }
+  ],
+  "sell_conditions": [
+    {
+      "indicator": "price_rise_from_entry",
+      "operator": ">",
+      "threshold": 2.0,
+      "indicator_params": {}
+    }
+  ],
+  "buy_logic": "AND",
+  "sell_logic": "AND",
+  "parameters": {
+    "lookback_period": {
+      "name": "lookback_period",
+      "value": 24,
+      "type": "int",
+      "optimizable": true,
+      "description": ""
+    },
+    "position_size_pct": {
+      "name": "position_size_pct",
+      "value": 10.0,
+      "type": "float",
+      "optimizable": true,
+      "description": ""
+    },
+    "volatility_threshold_pct": {
+      "name": "volatility_threshold_pct",
+      "value": 2.0,
+      "type": "float",
+      "optimizable": true,
+      "description": ""
+    }
+  }
+}

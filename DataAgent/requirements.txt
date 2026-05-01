@@ -1,0 +1,23 @@
+# DataAgent Dependencies
+
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# HTTP Client (for Kraken API)
+httpx==0.26.0
+
+# WebSocket Client (for Kraken live prices)
+websockets==12.0
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.3
+
+# Database (PostgreSQL)
+asyncpg==0.29.0
+
+# Utilities
+python-dotenv==1.0.0
